@@ -10,9 +10,9 @@ In this approach, the algorithm starts by creating an empty n x n matrix and the
 
  - ```generateMatrix(int n)``` is called. ```int[][] matrix = new int[n][n]``` instatiates a new matrix of size *n<sup>2</sup>*. ```matrix``` is set equal to the matrix returned by ```fillRightLayer(matrix, n, 0, 0, n)``` which begins the recursive loop building the spiral matrix. So after this method is called once,  for ```n = 3```our spiral matrix looks like the following:  
 ```
-                                                                [
-                                                                 [ 0, 0, 0 ],
-                                                                 [ 0, 0, 0 ],
-                                                                 [ 0, 0, 0 ]
-                                                                ]
+                                                            [
+                                                             [ 0, 0, 0 ],
+                                                             [ 0, 0, 0 ],
+                                                             [ 0, 0, 0 ]
+                                                            ]
 ```
