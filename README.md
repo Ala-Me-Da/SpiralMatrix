@@ -35,6 +35,31 @@ This part goes through illustrates the alogrithm's process.
 ```count = 5```, ```begin = 0```, ```end = 2```, ```n = 3```, new matrix is shown above. 
 
 
+- 
+
+### matrix (after fillLeft): #### 
+```
+                                       
+                                            [ 1, 2, 3 ],
+                                            [ 8, 0, 4 ],
+                                            [ 7, 6, 5 ]
+                                         
+```
+```count = 8```, ```begin = 1```, ```end = 2```, ```n = 3```, new matrix is shown above.
+
+
+### matrix (after fillRight): #### 
+```
+                                       
+                                            [ 1, 2, 3 ],
+                                            [ 8, 9, 4 ],
+                                            [ 7, 6, 5 ]
+                                         
+```
+```count = 9```, ```begin = 1```, ```end = 2```, ```n = 3```, new matrix is shown above.
+ At this point, the exit conditon of ``` count = n*n``` is met, so the recursion terminates and returns a reference to the completed spiral matrix. 
+
+
 ## SPACE / TIME - ANALYSIS ### 
 
 ** Time Complexity ** O(n<sup>2</sup>) 
