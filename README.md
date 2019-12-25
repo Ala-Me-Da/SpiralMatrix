@@ -24,7 +24,7 @@ This part goes through illustrates the alogrithm's process.
 ```count = 0```, ```begin = 0```, ```end = 0```, ```n = 3```, matrix is shown above.  
 - ```fillRightLayer(matrix, n, count, begin, end)``` is called. A for loop is called looping over the first row as indicated by the ```begin``` field, then finishing at the index specified by the ```end ``` field. When looping over, the current value of ```count ``` is inserted into the matrix and is incremented.  When the index ```i``` is equal to ```end ```, the inner loop starts. This goes over the column starting from ```begin + 1``` to ```end ```. After, we call ```fillLeftLayer(matrix, n, count, begin, end - 1)``` to deal with the bottom half of the matrix. 
 
-### matrix: #### 
+### matrix (after fillRight): #### 
 ```
                                        
                                             [ 1, 2, 3 ],
@@ -48,7 +48,7 @@ This part goes through illustrates the alogrithm's process.
 ```count = 8```, ```begin = 1```, ```end = 2```, ```n = 3```, new matrix is shown above.
 
 
-### matrix (after fillRight): #### 
+### matrix (after fillRight, final): #### 
 ```
                                        
                                             [ 1, 2, 3 ],
@@ -57,7 +57,7 @@ This part goes through illustrates the alogrithm's process.
                                          
 ```
 ```count = 9```, ```begin = 1```, ```end = 2```, ```n = 3```, new matrix is shown above.
- At this point, the exit conditon of ``` count = n*n``` is met, so the recursion terminates and returns a reference to the completed spiral matrix. 
+ At this point, the exit conditon of ``` count = n*n``` is met, so the recursion terminates and returns the completed spiral matrix. 
 
 
 ## SPACE / TIME - ANALYSIS ### 
