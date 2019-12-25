@@ -21,8 +21,8 @@ This part goes through illustrates the alogrithm's process.
                                             [ 0, 0, 0 ]
                                          
 ```
-count = 0, begin = 0, end = 0, n = 3, matrix is shown above.  
-- ```fillRightLayer(matrix, n, count, begin, end)``` is called. A for loop is called looping over the first row as indicated by the ```begin``` field, then finishing at the index specified by the ```end ``` field. When looping over, the current value of```count ``` is inserted into the matrix and is incremented.  When the index ```i``` is equal to ```end ```, the inner loop starts. This goes over the column starting from ```begin + 1``` to ```end ```. After, we call ```fillLeftLayer(matrix, n, count, begin, end - 1)``` to deal with the bottom half of the matrix. 
+```count = 0```, ```begin = 0```, ```end = 0```, ```n = 3```, matrix is shown above.  
+- ```fillRightLayer(matrix, n, count, begin, end)``` is called. A for loop is called looping over the first row as indicated by the ```begin``` field, then finishing at the index specified by the ```end ``` field. When looping over, the current value of ```count ``` is inserted into the matrix and is incremented.  When the index ```i``` is equal to ```end ```, the inner loop starts. This goes over the column starting from ```begin + 1``` to ```end ```. After, we call ```fillLeftLayer(matrix, n, count, begin, end - 1)``` to deal with the bottom half of the matrix. 
 
 ### matrix: #### 
 ```
@@ -32,7 +32,7 @@ count = 0, begin = 0, end = 0, n = 3, matrix is shown above.
                                             [ 0, 0, 5 ]
                                          
 ```
-count = 5, begin = 0, end = 2, n = 3, new matrix is shown above. 
+```count = 5```, ```begin = 0```, ```end = 2```, ```n = 3```, new matrix is shown above. 
 
 
 ## SPACE / TIME - ANALYSIS ### 
