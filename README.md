@@ -68,5 +68,5 @@ Below illustrates ```Solution.java``` process for input ```n = 3```
 
 ## SPACE / TIME - ANALYSIS ### 
 
-** Time Complexity ** O(n<sup>2</sup>) 
-** Space Complexity **  O(n<sup>2</sup>) 
+**Time Complexity**: O(n<sup>2</sup>) 
+**Space Complexity**:  O(n<sup>2</sup>) 
