@@ -9,9 +9,9 @@ Given a positive integer *n*, generate a square matrix filled with elements from
 ### OVERVIEW ### 
 In this approach, the algorithm starts by creating an empty n x n matrix and then passess a reference of the matrix into two methods -- ``` fillRightLayer(matrix, n, count, begin, end)``` and ``` fillLeftLayer(matrix, n, count, begin, end)```-- that fill different parts of the matrix. Each call each other until the matrix is filled with values 1 through *n<sup>2</sup>*. Those two parts are called "Right Layer" and "Left Layer". Right Layer deals with the top rows, rightmost columns and Left Layer deals with the bottom rows, leftmost columns. Right Layer is computed first, then Left Layer, and so forth until the total number of elements equals *n<sup>2</sup>*. Below steps through ``` Solution.java ``` to illustrate the process and Right / Left Layers. Before that, here is the method parameters explained: 
 
-* **matrix**:
-* **n**: 
-* **count**: 
+* **matrix**: a reference to the square matrix instatiated in ```generatedMatrix(int n)``` which will be updated recursively until a spiral matrix is created. 
+* **n**: Given positive integer. Passed in to ```fillRightLayer(matrix, n, count, begin, end)``` and ```fillLeftLayer(matrix, n, count, begin, end - 1)``` to compute the exiting condition ``` count == n*n``` each time those methods are called. 
+* **count**: The number of elements inserted into ```matrix```. 
 * **begin**:
 * **end**:  
 
@@ -63,7 +63,7 @@ Below illustrates ```Solution.java``` process for input ```n = 3```
                                          
 ```
 ```count = 9```, ```begin = 1```, ```end = 2```, ```n = 3```, new matrix is shown above.
- At this point, the exit conditon of ``` count = n*n``` is met, so the recursion terminates and returns the completed spiral matrix. 
+ At this point, the exiting conditon ``` count == n*n``` is met, so the recursion terminates and returns the completed spiral matrix. 
 
 
 ## SPACE / TIME - ANALYSIS ### 
