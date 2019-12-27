@@ -12,8 +12,8 @@ In this approach, the algorithm starts by creating an empty n x n matrix and the
 * **matrix**: a reference to the square matrix instatiated in ```generatedMatrix(int n)``` which will be updated recursively until a spiral matrix is created. 
 * **n**: Given positive integer. Passed in to ```fillRightLayer(matrix, n, count, begin, end)``` and ```fillLeftLayer(matrix, n, count, begin, end - 1)``` to compute the exiting condition ``` count == n*n``` each time those methods are called. 
 * **count**: The number of elements inserted into ```matrix```. 
-* **begin**:
-* **end**:  
+* **begin**: Used to determine what rows and columns to start with in the right layer. Use to determine when to end a loop in the left layer.  
+* **end**:  Use to determine when end a loop in the right layer. Used to determine what rows and columns to start with in the left layer. 
 
 ### CODE STEP-THRU ### 
 Below illustrates ```Solution.java``` process for input ```n = 3```
@@ -28,7 +28,7 @@ Below illustrates ```Solution.java``` process for input ```n = 3```
                                          
 ```
 ```count = 0```, ```begin = 0```, ```end = 0```, ```n = 3```, matrix is shown above.  
-- ```fillRightLayer(matrix, n, count, begin, end)``` is called. A for loop is called looping over the first row as indicated by the ```begin``` field, then finishing at the index specified by the ```end ``` field. When looping over, the current value of ```count ``` is inserted into the matrix and is incremented.  When the index ```i``` is equal to ```end ```, the inner loop starts. This goes over the column starting from ```begin + 1``` to ```end ```. After, we call ```fillLeftLayer(matrix, n, count, begin, end - 1)``` to deal with the bottom half of the matrix. 
+- ```fillRightLayer(matrix, n, count, begin, end)``` is called. A for loop is called looping over the first row as indicated by the ```begin``` field, then finishing at the index specified by the ```end ``` field. When looping over, the current value of ```count ``` is inserted into the matrix and is incremented.  When the index ```i``` is equal to ```end ```, the inner loop starts. This goes over the column starting from ```begin + 1``` to ```end ```. After, a call to ```fillLeftLayer(matrix, n, count, begin, end - 1)``` is done to compute the bottom half of the matrix. 
 
 ### matrix (after fillRight): #### 
 ```
@@ -40,10 +40,10 @@ Below illustrates ```Solution.java``` process for input ```n = 3```
 ```
 ```count = 5```, ```begin = 0```, ```end = 2```, ```n = 3```, new matrix is shown above. 
 
-
-- 
+-  ```fillLeftLayer(matrix, n, count, begin, end - 1)``` is called, picking up where ```fillRightLayer(matrix, n, count, begin, end)``` left off. ```end``` is used to determine what row to loop over, as well as what column after the row is computed. Loops decrement down to the ```begin``` or ```begin + 1```  as the spiral order adds elements to the matrix in reverse order. As seen below: 
 
 ### matrix (after fillLeft): #### 
+
 ```
                                        
                                             [ 1, 2, 3 ],
