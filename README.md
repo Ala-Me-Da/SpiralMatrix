@@ -69,4 +69,5 @@ Below illustrates ```Solution.java``` process for input ```n = 3```
 ## SPACE / TIME - ANALYSIS ### 
 
 **Time Complexity**: O(n<sup>2</sup>) 
-**Space Complexity**:  O(n<sup>2</sup>) 
+**Space Complexity**:  O(n<sup>2</sup>).  Quick Proof: ```generateMatrix(int n)```  allocates an one matrix of size *n<sup>2</sup>*. Then the recursion loop is entered, until exactly *n<sup>2</sup>* method calls are pushed onto the call stack. 
+So total space is *n<sup>2</sup>* + *n<sup>2</sup>* = O(n<sup>2</sup>).
