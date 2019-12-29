@@ -68,6 +68,7 @@ Below illustrates ```Solution.java``` process for input ```n = 3```
 
 ## SPACE / TIME - ANALYSIS ### 
 
-**Time Complexity**: O(n<sup>2</sup>) 
+**Time Complexity**: O(n<sup>2</sup>). Quick Proof: When the recursion starts, operations in ```fillRightLayer(matrix, n, count, begin, end)``` / ```fillLeftLayer(matrix, n, count, begin, end)``` are linear time O(n) but quickly decrease into constant time as ```begin``` and  ``` end``` are increased and decreased respectively. The total runtime is then a sum of the runtime for each method call, yielding O(n + (n - 1) + ... + 1) = O(n<sup>2</sup>).
+  
 **Space Complexity**:  O(n<sup>2</sup>).  Quick Proof: ```generateMatrix(int n)```  allocates an one matrix of size *n<sup>2</sup>*. Then the recursion loop is entered, until exactly *n<sup>2</sup>* method calls are pushed onto the call stack. 
 So total space is *n<sup>2</sup>* + *n<sup>2</sup>* =  2*n<sup>2</sup>*= O(n<sup>2</sup>).
